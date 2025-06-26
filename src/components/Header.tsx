@@ -16,12 +16,6 @@ const Header = () => {
                   onPress={() => Alert.alert('Camera Pressed')}
         />
         <VectorIcon
-          type="Ionicons"
-          name="search"
-          color={Colors.secondaryColor}
-          size={25}
-        />
-        <VectorIcon
           type="Entypo"
           name="dots-three-vertical"
           color={Colors.secondaryColor}
