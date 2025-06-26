@@ -31,7 +31,7 @@ export default Header
 const styles = StyleSheet.create({
     container: {
     paddingHorizontal: 15,
-    paddingVertical: 10,
+    paddingVertical: 15,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   },
     iconContainer: {
       flexDirection: 'row',
-        gap: 10,
+      gap: 20,
       alignItems: 'center',
   },
 });

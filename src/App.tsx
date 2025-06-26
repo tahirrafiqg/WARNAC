@@ -1,38 +1,28 @@
 import React from 'react';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
-import { View, StatusBar, StyleSheet } from 'react-native';
-import HomeScreen from './screens/HomeScreen';
+import Navigation from './navigation/Navigation';
+import { StatusBar } from 'react-native';
 import { Colors } from './theme/Colors';
-
-const AppContent = () => {
-  const insets = useSafeAreaInsets();
-
-  return (
-    <View style={[styles.container, { paddingTop: insets.top }]}>
-      <StatusBar
-        backgroundColor={Colors.background}
-        barStyle="light-content"
-        translucent={false}
-      />
-      <HomeScreen />
-    </View>
-  );
-};
-
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <AppContent />
-    </SafeAreaProvider>
+    <>
+      <SafeAreaProvider>
+        <StatusBar
+          backgroundColor="black"
+          barStyle="light-content"
+          translucent={false}
+        />
+        <SafeAreaView style={styles.SAV}>
+          <Navigation />
+        </SafeAreaView>
+      </SafeAreaProvider>
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
+const styles = {
+  SAV: {
     flex: 1,
     backgroundColor: Colors.background,
   },
-});
+};
