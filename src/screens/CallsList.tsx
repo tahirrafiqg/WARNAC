@@ -4,7 +4,7 @@ import React from 'react'
 const CallsList = () => {
   return (
     <View>
-      <Text>CallsList</Text>
+      <Text>Call Logs</Text>
     </View>
   )
 }
